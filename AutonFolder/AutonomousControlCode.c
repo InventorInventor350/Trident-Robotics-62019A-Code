@@ -36,7 +36,7 @@ task main()
 
 		}
 
-		if(SensorValue[liftPotent] >=  ) //Ex: Lift lifting
+		if(SensorValue[liftPotent] <= 3326.11) //Ex: Lift lifting
 		{
 
 			Phase1LiftMovementIsNotDone = false;
@@ -46,7 +46,8 @@ task main()
 		else
 		{
 
-
+			motor[liftSet1] = 100;
+			motor[liftSet2] = 100;
 
 		}
 
