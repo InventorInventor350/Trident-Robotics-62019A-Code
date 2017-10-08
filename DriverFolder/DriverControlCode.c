@@ -70,16 +70,16 @@ task main()
 		if(vexRT[Btn5U] == 1) //Controls dr4b lift
 		{
 
-			motor[liftSet1] = 127;
-			motor[liftSet2] = 127;
+			motor[liftSet1] = 120;
+			motor[liftSet2] = 120;
 
 		}
 
 		else if(vexRT[Btn5D] == 1) //Controls dr4b lift
 		{
 
-			motor[liftSet1] = -127;
-			motor[liftSet2] = -127;
+			motor[liftSet1] = -120;
+			motor[liftSet2] = -120;
 
 		}
 
@@ -94,16 +94,16 @@ task main()
 		if(vexRT[Btn6U] == 1) //Controls chain bar lift
 		{
 
-			motor[leftChainBar] = 65;
-			motor[rightChainBar] = 65;
+			motor[leftChainBar] = 100;
+			motor[rightChainBar] = 100;
 
 		}
 
 		else if(vexRT[Btn6D] == 1) //Controls chain bar lift
 		{
 
-			motor[leftChainBar] = -65;
-			motor[rightChainBar] = -65;
+			motor[leftChainBar] = -100;
+			motor[rightChainBar] = -100;
 
 		}
 
