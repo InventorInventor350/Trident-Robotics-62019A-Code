@@ -75,16 +75,127 @@ task usercontrol()
 
 	while (true)
 	{
-		// This is the main execution loop for the user control program.
-		// Each time through the loop your program should update motor + servo
-		// values based on feedback from the joysticks.
+		
+		if(vexRT[Ch3] > 10 || vexRT[Ch3] < -10) //Control for left side of base
+		{
 
-		// ........................................................................
-		// Insert user code here. This is where you use the joystick values to
-		// update your motors, etc.
-		// ........................................................................
+			motor[leftBase] = vexRT[Ch3];
 
-		// Remove this function call once you have "real" code.
-		UserControlCodePlaceholderForTesting();
+		}
+
+		else
+		{
+
+			motor[leftBase] = 0;
+
+		}
+
+		if(vexRT[Ch2] > 10 || vexRT[Ch2] < -10) //Control for right side of base
+		{
+
+			motor[rightBase] = vexRT[Ch2];
+
+		}
+
+		else
+		{
+
+			motor[rightBase] = 0;
+
+		}
+
+		if(vexRT[Btn7U] == 1) //Controls Mogo manipulator
+		{
+
+			motor[leftMogo] = 65;
+			motor[rightMogo] = 65;
+
+		}
+
+		else if(vexRT[Btn7D] == 1) //Controls Mogo manipulator
+		{
+
+			motor[leftMogo] = -65;
+			motor[rightMogo] = -65;
+
+		}
+
+		else
+		{
+
+			motor[leftMogo] = 0;
+			motor[rightMogo] = 0;
+
+		}
+
+		if(vexRT[Btn5UXmtr2] == 1) //Controls dr4b lift
+		{
+
+			motor[liftSet1] = 120;
+			motor[liftSet2] = 120;
+
+		}
+
+		else if(vexRT[Btn5DXmtr2] == 1) //Controls dr4b lift
+		{
+
+			motor[liftSet1] = -120;
+			motor[liftSet2] = -120;
+
+		}
+
+		else
+		{
+
+			motor[liftSet1] = 0;
+			motor[liftSet2] = 0;
+
+		}
+
+		if(vexRT[Btn6UXmtr2] == 1) //Controls chain bar lift
+		{
+
+			motor[leftChainBar] = 100;
+			motor[rightChainBar] = 100;
+
+		}
+
+		else if(vexRT[Btn6DXmtr2] == 1) //Controls chain bar lift
+		{
+
+			motor[leftChainBar] = -100;
+			motor[rightChainBar] = -100;
+
+		}
+
+		else
+		{
+
+			motor[leftChainBar] = 0;
+			motor[rightChainBar] = 0;
+
+		}
+
+		if(vexRT[Btn8UXmtr2] == 1) //Controls claw
+		{
+
+			motor[clawMotor] = 127;
+
+		}
+
+		else if(vexRT[Btn8DXmtr2] == 1) //Controls claw
+		{
+
+			motor[clawMotor] = -127;
+
+		}
+
+		else
+		{
+
+			motor[clawMotor] = 0;
+
+		}
+		
 	}
 }
