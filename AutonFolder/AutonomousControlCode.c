@@ -18,10 +18,10 @@ task main()
 	bool Phase1BaseMovementIsNotDone = true;
 	bool Phase1LiftMovementIsNotDone = true;
 
-	while(Phase1BaseMovementIsNotDone || Phase1LiftMovementIsNotDone)
+	while(Phase1BaseMovementIsNotDone || Phase1LiftMovementIsNotDone) //Phase one, go to stationary goal
 	{
 
-		if(fabs(SensorValue[baseEncoderLeft]) >= 970 && fabs(SensorValue[baseEncoderRight]) >= 970) //Ex: Base moving
+		if(fabs(SensorValue[baseEncoderLeft]) >= 970 && fabs(SensorValue[baseEncoderRight]) >= 970) //Base moving
 		{
 
 			Phase1BaseMovementIsNotDone = false;
@@ -36,7 +36,7 @@ task main()
 
 		}
 
-		if(SensorValue[liftPotent] >=  ) //Ex: Lift lifting
+		if(SensorValue[liftPotent] <= 3326.11) Lift lifting
 		{
 
 			Phase1LiftMovementIsNotDone = false;
@@ -46,10 +46,13 @@ task main()
 		else
 		{
 
-
+			motor[liftSet1] = 100;
+			motor[liftSet2] = 100;
 
 		}
 
 	}
+	
+	
 
 }
