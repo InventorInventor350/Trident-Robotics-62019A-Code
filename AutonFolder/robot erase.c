@@ -30,7 +30,7 @@ task main()
 	{
 		
 
-		if(fabs(SensorValue[leftBaseEncoder]) >= 970 && fabs(SensorValue[rightBaseEncoder]) >= 970) //Base moving
+		if(fabs(SensorValue[leftBaseEncoder]) >= 972.31 && fabs(SensorValue[rightBaseEncoder]) >= 972.31) //Base moving
 		{
 
 			Phase1BaseMovementIsNotDone = false;
@@ -88,7 +88,7 @@ task main()
 		}
 	}
 	
-	while(true)//chainbar will go 
+	while()//chainbar will go 
 	{
  		if(SensorValue[rightChainBarEncoder] <= 9)
  		{
@@ -119,7 +119,7 @@ task main()
 	
 	while(Phase3BaseMovementIsNotDone || Phase3LiftMovementIsNotDone)
 	{
-		if(fabs(SensorValue[left]) >= 970 && fabs(SensorValue[]) >= 970)
+		if(fabs(SensorValue[leftBaseEncoder]) >= 970 && fabs(SensorValue[rightBaseEncoder]) >= 970)
 		
 
 }
