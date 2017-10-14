@@ -63,8 +63,7 @@ task main()
 
 	}
 	
-	while(true)//chainbar will go 
-	{
+	
  		if(SensorValue[rightChainBarEncoder] >= 9)
  		{
 			motor[leftChainBar]= 127;
@@ -76,8 +75,8 @@ task main()
 			motor[rightChainBar]=0;
 		}
   }
-	while(true)
-	{
+	
+	
 		if(SensorValue[clawPotent] < 9)
 		{
 			motor[clawMotor]= 127;
@@ -86,7 +85,7 @@ task main()
 		{
 			motor[clawMotor]= 0;
 		}
-	}
+	
 	
 	while()//chainbar will go 
 	{
@@ -102,8 +101,7 @@ task main()
 		}
   }
 		
-	while(true)
-	{
+
 		if(SensorValue[leftBaseEncoder] >= 9 && SensorValue[rightBaseEncoder] >= 9) // base turning
 		{
 			motor[leftBase] = 115;
@@ -115,7 +113,7 @@ task main()
 			motor[leftBase] = 0;
 			motor[rightBase] = 0;
 		}
-	}
+	
 	
 	while(Phase3BaseMovementIsNotDone || Phase3LiftMovementIsNotDone)
 	{
