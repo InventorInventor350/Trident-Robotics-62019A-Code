@@ -67,19 +67,19 @@ task main()
 
 		}
 
-		if(vexRT[Btn5U] == 1) //Controls dr4b lift
+		if(vexRT[Btn5UXmtr2] == 1) //Controls dr4b lift
 		{
 
-			motor[liftSet1] = 120;
-			motor[liftSet2] = 120;
+			motor[liftSet1] = -120; //Negative is up
+			motor[liftSet2] = -120;
 
 		}
 
-		else if(vexRT[Btn5D] == 1) //Controls dr4b lift
+		else if(vexRT[Btn5DXmtr2] == 1) //Controls dr4b lift
 		{
 
-			motor[liftSet1] = -120;
-			motor[liftSet2] = -120;
+			motor[liftSet1] = 120; //Positive is down
+			motor[liftSet2] = 120;
 
 		}
 
@@ -91,7 +91,7 @@ task main()
 
 		}
 
-		if(vexRT[Btn6U] == 1) //Controls chain bar lift
+		if(vexRT[Btn6UXmtr2] == 1) //Controls chain bar lift
 		{
 
 			motor[leftChainBar] = 100;
@@ -99,7 +99,7 @@ task main()
 
 		}
 
-		else if(vexRT[Btn6D] == 1) //Controls chain bar lift
+		else if(vexRT[Btn6DXmtr2] == 1) //Controls chain bar lift
 		{
 
 			motor[leftChainBar] = -100;
@@ -115,14 +115,14 @@ task main()
 
 		}
 
-		if(vexRT[Btn8U] == 1) //Controls claw
+		if(vexRT[Btn8UXmtr2] == 1) //Controls claw
 		{
 
 			motor[clawMotor] = 127;
 
 		}
 
-		else if(vexRT[Btn8D] == 1) //Controls claw
+		else if(vexRT[Btn8DXmtr2] == 1) //Controls claw
 		{
 
 			motor[clawMotor] = -127;
